@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Royale Cart - About Us | The Story of Elegance</title>
+  <!-- Google Fonts: refined serif + modern sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fefaf5;
+      color: #1e1a15;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    /* header navigation (matches homepage) */
+    .top-bar {
+      background: #fffaf3;
+      border-bottom: 1px solid #f0e5da;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(2px);
+    }
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 20px 0;
+      gap: 20px;
+    }
+    .logo h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #c49a6c, #a57248);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .logo span {
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+      color: #b47c48;
+      display: block;
+      font-family: 'Inter', sans-serif;
+    }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #2c241e;
+      transition: 0.2s;
+      font-size: 1rem;
+    }
+    .nav-links a:hover {
+      color: #b47c48;
+    }
+    .header-icons {
+      display: flex;
+      gap: 20px;
+      font-size: 1.3rem;
+      color: #2c241e;
+    }
+    .header-icons i {
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .header-icons i:hover {
+      color: #b47c48;
+    }
+
+    /* about hero section */
+    .about-hero {
+      background: linear-gradient(115deg, #efe2d4 0%, #faf0e6 100%);
+      border-radius: 48px;
+      margin: 40px 0 30px;
+      padding: 60px 48px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 48px;
+    }
+    .hero-text {
+      flex: 1.2;
+    }
+    .hero-text .royale-tag {
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #b47c48;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .hero-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: #2b211b;
+      margin-bottom: 24px;
+    }
+    .hero-text p {
+      font-size: 1.1rem;
+      color: #4f3e2e;
+      margin-bottom: 28px;
+      max-width: 90%;
+    }
+    .hero-img {
+      flex: 0.9;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0 25px 35px -12px rgba(0,0,0,0.15);
+    }
+    .hero-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: 0.4s;
+    }
+    .hero-img:hover img {
+      transform: scale(1.02);
+    }
+
+    /* story section */
+    .story-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 48px;
+      margin: 70px 0;
+      align-items: center;
+    }
+    .story-img {
+      flex: 1;
+      border-radius: 36px;
+      overflow: hidden;
+    }
+    .story-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .story-content {
+      flex: 1;
+    }
+    .story-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .story-content h2:after {
+      content: '';
+      width: 70px;
+      height: 3px;
+      background: #dbbf9b;
+      display: block;
+      margin-top: 12px;
+      border-radius: 4px;
+    }
+    .story-content p {
+      margin-bottom: 20px;
+      color: #3a2e26;
+    }
+
+    /* values / pillars */
+    .values {
+      background: #fff9f3;
+      border-radius: 48px;
+      padding: 60px 40px;
+      margin: 40px 0;
+      text-align: center;
+    }
+    .values h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      margin-bottom: 16px;
+    }
+    .values-sub {
+      max-width: 600px;
+      margin: 0 auto 48px;
+      color: #6b5a48;
+    }
+    .pillars {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+    .pillar {
+      flex: 1 1 250px;
+      background: white;
+      border-radius: 32px;
+      padding: 32px 20px;
+      transition: 0.25s;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.02);
+      border: 1px solid #f0e2d6;
+    }
+    .pillar:hover {
+      transform: translateY(-8px);
+      border-color: #dbbf9b;
+    }
+    .pillar i {
+      font-size: 2.8rem;
+      color: #b47c48;
+      margin-bottom: 20px;
+    }
+    .pillar h3 {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+    }
+
+    /* team / artisans */
+    .team-section {
+      margin: 70px 0;
+    }
+    .team-section h2 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      margin-bottom: 48px;
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
+    .member {
+      text-align: center;
+    }
+    .member-img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 20px;
+      border: 4px solid #f0dfcf;
+      transition: 0.2s;
+    }
+    .member-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .member h4 {
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+    .member p {
+      color: #b47c48;
+      font-weight: 500;
+    }
+
+    /* milestone banner */
+    .milestone {
+      background: #2b211b;
+      border-radius: 48px;
+      padding: 48px 40px;
+      margin: 50px 0;
+      color: #ecd6bf;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+      text-align: center;
+    }
+    .milestone-item {
+      flex: 1;
+    }
+    .milestone-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #dbbf9b;
+    }
+
+    /* cta banner */
+    .cta-royale {
+      background: linear-gradient(135deg, #e9dbcf, #f9efe6);
+      border-radius: 48px;
+      padding: 50px 40px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .cta-royale h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+    }
+    .btn-primary {
+      background: #2b211b;
+      color: white;
+      border: none;
+      padding: 12px 32px;
+      border-radius: 60px;
+      font-weight: 600;
+      margin-top: 24px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .btn-primary:hover {
+      background: #b47c48;
+      transform: scale(1.02);
+    }
+
+    /* footer */
+    footer {
+      background: #1e1813;
+      color: #ddcdbc;
+      margin-top: 60px;
+      padding: 48px 0 24px;
+    }
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    .footer-col p {
+      margin: 12px 0;
+    }
+    .footer-col .logo-foot {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #ecd6bf;
+    }
+    .social-icons i {
+      font-size: 1.3rem;
+      margin-right: 16px;
+      cursor: pointer;
+    }
+    .copyright {
+      text-align: center;
+      margin-top: 48px;
+      font-size: 0.75rem;
+      border-top: 1px solid #2f271f;
+      padding-top: 24px;
+    }
+    @media (max-width: 800px) {
+      .container {
+        padding: 0 20px;
+      }
+      .about-hero {
+        flex-direction: column;
+        padding: 40px 24px;
+      }
+      .hero-text h1 {
+        font-size: 2.2rem;
+      }
+      .navbar {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="container">
+    <div class="navbar">
+      <div class="logo">
+        <h1>ROYALE CART</h1>
+        <span>Élégance & Prestige</span>
+      </div>
+      <ul class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+      </ul>
+      <div class="header-icons">
+        <i class="fa-regular fa-heart"></i>
+        <i class="fa-regular fa-user"></i>
+        <i class="fa-solid fa-bag-shopping"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="container">
+    <!-- Hero about section with image -->
+    <div class="about-hero">
+      <div class="hero-text">
+        <div class="royale-tag"><i class="fas fa-crown"></i> Since 2022 · Paris</div>
+        <h1>Where Heritage<br>Meets Modern Royalty</h1>
+        <p>Royale Cart was born from a desire to reimagine luxury — not as distant perfection, but as intimate elegance. We merge centuries-old craftsmanship with contemporary vision, offering pieces that become heirlooms.</p>
+        <div style="display: flex; gap: 16px;">
+          <i class="fas fa-gem" style="color:#b47c48;"></i>
+          <i class="fas fa-feather-alt" style="color:#b47c48;"></i>
+          <i class="fas fa-globe-europe" style="color:#b47c48;"></i>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="https://picsum.photos/id/133/600/500" alt="Royale Cart boutique atelier" loading="lazy">
+      </div>
+    </div>
+
+    <!-- Story: Our Legacy -->
+    <div class="story-section">
+      <div class="story-img">
+        <img src="https://picsum.photos/id/159/500/550" alt="artisan handcrafting luxury goods" loading="lazy">
+      </div>
+      <div class="story-content">
+        <h2>The Maison Royale Story</h2>
+        <p>Founded in the heart of Paris, Royale Cart began as a small atelier dedicated to creating exceptional leather goods and accessories. Inspired by the golden age of French luxury, our founder, Isabelle Moreau, envisioned a house that celebrates timeless sophistication without pretense.</p>
+        <p>Today, we collaborate with master artisans across Italy, France, and Spain — each piece bearing the mark of meticulous attention, from hand-stitched seams to ethically sourced materials. Every Royale Cart item tells a story of passion, integrity, and understated splendor.</p>
+        <p><strong>Our mission:</strong> To craft treasures that empower self-expression, while championing sustainable luxury. We are a carbon-neutral brand and donate 2% of profits to artisans’ education.</p>
+      </div>
+    </div>
+
+    <!-- Core values (pillars with icons) -->
+    <div class="values">
+      <h2>The Royale Ethos</h2>
+      <div class="values-sub">Four pillars that guide our every decision, from design to delivery</div>
+      <div class="pillars">
+        <div class="pillar">
+          <i class="fas fa-hand-sparkles"></i>
+          <h3>Artisan First</h3>
+          <p>We honor traditional techniques, paying fair wages and preserving rare craftsmanship.</p>
+        </div>
+        <div class="pillar">
+          <i class="fas fa-leaf"></i>
+          <h3>Conscious Luxury</h3>
+          <p>Eco-certified materials, zero-waste packaging, and responsible sourcing.</p>
+        </div>
+        <div class="pillar">
+          <i class="fas fa-heart"></i>
+          <h3>Client Devotion</h3>
+          <p>White-glove service, personal shopping, and lifelong care for every piece.</p>
+        </div>
+        <div class="pillar">
+          <i class="fas fa-infinity"></i>
+          <h3>Timeless Design</h3>
+          <p>Transcending trends, our collections are made to last — in style and substance.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Milestones / achievements -->
+    <div class="milestone">
+      <div class="milestone-item">
+        <div class="milestone-number">300+</div>
+        <div>Exclusive Designs</div>
+      </div>
+      <div class="milestone-item">
+        <div class="milestone-number">12</div>
+        <div>Global Flagships</div>
+      </div>
+      <div class="milestone-item">
+        <div class="milestone-number">25K+</div>
+        <div>Royale Circle Members</div>
+      </div>
+      <div class="milestone-item">
+        <div class="milestone-number">100%</div>
+        <div>Carbon Neutral Since '24</div>
+      </div>
+    </div>
+
+    <!-- Team / faces behind the brand with different images -->
+    <div class="team-section">
+      <h2>The Guardians of Elegance</h2>
+      <div class="team-grid">
+        <div class="member">
+          <div class="member-img"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Isabelle Moreau"></div>
+          <h4>Isabelle Moreau</h4>
+          <p>Founder & Creative Director</p>
+        </div>
+        <div class="member">
+          <div class="member-img"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Jean-luc Dumas"></div>
+          <h4>Jean-Luc Dumas</h4>
+          <p>Master Artisan</p>
+        </div>
+        <div class="member">
+          <div class="member-img"><img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Elena Rossi"></div>
+          <h4>Elena Rossi</h4>
+          <p>Sustainability Lead</p>
+        </div>
+        <div class="member">
+          <div class="member-img"><img src="https://randomuser.me/api/portraits/men/75.jpg" alt="William Park"></div>
+          <h4>William Park</h4>
+          <p>Head of Client Relations</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- craftsmanship showcase (second story style) -->
+    <div class="story-section" style="flex-direction: row-reverse; margin-top: 20px;">
+      <div class="story-img">
+        <img src="https://picsum.photos/id/222/500/550" alt="atelier luxury workshop" loading="lazy">
+      </div>
+      <div class="story-content">
+        <h2>From Atelier to You</h2>
+        <p>Every Royale Cart piece begins its journey as a raw sketch, then evolves through dozens of hands — pattern makers, leather cutters, seamstresses, and finishers. Our atelier in the Marais district echoes with the quiet rhythm of dedication. We use only full-grain leathers, natural linings, and precious metals free from conflict.</p>
+        <p>We invite you to explore our “Made to Order” program, where you can co-create personalized pieces with our artisans. Because true luxury is not mass-produced — it’s imagined, nurtured, and delivered with a royal touch.</p>
+        <button class="btn-primary" style="background: #b47c48; margin-top: 10px;">Discover Atelier Stories <i class="fas fa-arrow-right"></i></button>
+      </div>
+    </div>
+
+    <!-- Final inspiring CTA -->
+    <div class="cta-royale">
+      <h2>Join the Royale Cart Legacy</h2>
+      <p style="max-width: 600px; margin: 16px auto;">Experience the fusion of heritage and innovation. Become part of a community that values beauty, authenticity, and excellence.</p>
+      <button class="btn-primary" onclick="alert('Thank you for your interest! Explore our latest collection.')">Explore Collections →</button>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo-foot">ROYALE CART</div>
+        <p>Luxury e-boutique since 2022</p>
+        <div class="social-icons">
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-pinterest"></i>
+        </div>
+      </div>
+      <div class="footer-col">
+        
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 Royale Cart – All Rights Reserved. Crafted with devotion in Paris.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // interactive icon alerts & smooth cta
+  const headerIcons = document.querySelectorAll('.header-icons i');
+  headerIcons.forEach(icon => {
+    icon.addEventListener('click', () => {
+      alert('✨ Welcome to Royale Cart — a world of timeless elegance awaits.');
+    });
+  });
+  const ctaBtn = document.querySelector('.cta-royale .btn-primary');
+  if(ctaBtn) {
+    ctaBtn.addEventListener('click', () => {
+      window.location.href = '#';
+    });
+  }
+  // subtle hover for pillars already in css
+</script>
+</body>
+</html>

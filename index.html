@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Royale Cart | Royalty in Every Click</title>
+  <!-- Google Fonts for elegant typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (free icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fefaf5;
+      color: #1e1a15;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    /* container utility */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* header / navigation */
+    .top-bar {
+      background: #fffaf3;
+      border-bottom: 1px solid #f0e5da;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(2px);
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 20px 0;
+      gap: 20px;
+    }
+
+    .logo h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #c49a6c, #a57248);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .logo span {
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+      color: #b47c48;
+      display: block;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #2c241e;
+      transition: 0.2s;
+      font-size: 1rem;
+    }
+    .nav-links a:hover {
+      color: #b47c48;
+    }
+
+    .header-icons {
+      display: flex;
+      gap: 20px;
+      font-size: 1.3rem;
+      color: #2c241e;
+    }
+    .header-icons i {
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .header-icons i:hover {
+      color: #b47c48;
+    }
+
+    /* hero section with rich imagery */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      padding: 60px 0 40px;
+    }
+    .hero-content {
+      flex: 1 1 45%;
+    }
+    .hero-content .badge {
+      background: #f2e3d5;
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #9b5e2c;
+      margin-bottom: 20px;
+    }
+    .hero-content h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: #2b211b;
+    }
+    .hero-content p {
+      font-size: 1.05rem;
+      color: #5a4a3a;
+      margin-bottom: 30px;
+      max-width: 90%;
+    }
+    .btn-group {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: #2b211b;
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s;
+      font-size: 0.9rem;
+    }
+    .btn-primary:hover {
+      background: #b47c48;
+      transform: translateY(-2px);
+    }
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid #d6c4b2;
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .btn-secondary:hover {
+      border-color: #b47c48;
+      color: #b47c48;
+    }
+
+    .hero-gallery {
+      flex: 1 1 50%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .hero-img {
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
+      transition: 0.3s ease;
+    }
+    .hero-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: 0.5s;
+    }
+    .hero-img:hover img {
+      transform: scale(1.03);
+    }
+    .hero-img.large {
+      grid-row: span 2;
+    }
+    .img-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* category section with different images */
+    .section-title {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 600;
+      margin: 60px 0 30px;
+      position: relative;
+    }
+    .section-title:after {
+      content: '';
+      width: 70px;
+      height: 3px;
+      background: #dbbf9b;
+      display: block;
+      margin: 12px auto 0;
+      border-radius: 4px;
+    }
+
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 32px;
+      margin: 40px 0 20px;
+    }
+    .category-card {
+      background: white;
+      border-radius: 32px;
+      overflow: hidden;
+      width: 230px;
+      text-align: center;
+      box-shadow: 0 12px 24px -10px rgba(0,0,0,0.05);
+      transition: all 0.25s;
+      cursor: pointer;
+    }
+    .category-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 28px -12px rgba(0,0,0,0.12);
+    }
+    .category-img {
+      height: 200px;
+      overflow: hidden;
+    }
+    .category-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.4s;
+    }
+    .category-card:hover .category-img img {
+      transform: scale(1.05);
+    }
+    .category-card h3 {
+      margin: 18px 0 8px;
+      font-weight: 600;
+      font-size: 1.3rem;
+    }
+    .category-card p {
+      font-size: 0.85rem;
+      color: #8b765c;
+      padding-bottom: 20px;
+    }
+
+    /* featured products with different style images */
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 30px;
+      margin: 30px 0 60px;
+    }
+    .product-card {
+      background: #ffffffd9;
+      backdrop-filter: blur(2px);
+      border-radius: 28px;
+      overflow: hidden;
+      transition: 0.25s;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+      border: 1px solid #f3e9e0;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.08);
+      border-color: #e7d8ca;
+    }
+    .product-img {
+      height: 280px;
+      overflow: hidden;
+      background: #f9f2ea;
+    }
+    .product-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.3s;
+    }
+    .product-card:hover .product-img img {
+      transform: scale(1.03);
+    }
+    .product-info {
+      padding: 20px 16px 24px;
+    }
+    .product-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    .product-price {
+      color: #b47c48;
+      font-weight: 700;
+      margin: 8px 0;
+    }
+    .rating {
+      color: #f5b642;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+    }
+    .add-cart {
+      margin-top: 14px;
+      background: #fcf6ef;
+      border: 1px solid #e7d5c6;
+      padding: 8px 0;
+      text-align: center;
+      border-radius: 60px;
+      font-weight: 500;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .add-cart:hover {
+      background: #2b211b;
+      color: white;
+      border-color: #2b211b;
+    }
+
+    /* banner with lifestyle image */
+    .banner-luxury {
+      background: linear-gradient(95deg, #f1e5d8 0%, #faf1e7 100%);
+      border-radius: 48px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      margin: 40px 0 70px;
+      overflow: hidden;
+    }
+    .banner-text {
+      flex: 1;
+      padding: 48px 40px;
+    }
+    .banner-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .banner-text p {
+      margin-bottom: 24px;
+      color: #4f3e2e;
+    }
+    .banner-img {
+      flex: 0.8;
+      max-height: 320px;
+      object-fit: cover;
+    }
+    .banner-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* testimonial section */
+    .testimonial {
+      background: #ffffffd9;
+      border-radius: 48px;
+      padding: 48px 32px;
+      margin: 30px 0 60px;
+      text-align: center;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.02);
+    }
+    .quote-icon {
+      font-size: 2.8rem;
+      color: #dec09e;
+      margin-bottom: 16px;
+    }
+    .testimonial p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 20px;
+      font-style: italic;
+      color: #2f2620;
+    }
+    .customer {
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+    }
+    .customer img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    /* footer */
+    footer {
+      background: #1e1813;
+      color: #ddcdbc;
+      margin-top: 60px;
+      padding: 48px 0 24px;
+    }
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    .footer-col p {
+      margin: 12px 0;
+    }
+    .footer-col .logo-foot {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #ecd6bf;
+    }
+    .social-icons i {
+      font-size: 1.3rem;
+      margin-right: 16px;
+      cursor: pointer;
+    }
+    .copyright {
+      text-align: center;
+      margin-top: 48px;
+      font-size: 0.75rem;
+      border-top: 1px solid #2f271f;
+      padding-top: 24px;
+    }
+
+    @media (max-width: 800px) {
+      .hero-gallery {
+        grid-template-columns: 1fr 1fr;
+      }
+      .hero-content h1 {
+        font-size: 2.3rem;
+      }
+      .navbar {
+        flex-direction: column;
+      }
+      .nav-links {
+        gap: 20px;
+      }
+      .container {
+        padding: 0 20px;
+      }
+    }
+  </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NTV0NLN2X5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-NTV0NLN2X5');
+</script>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="container">
+    <div class="navbar">
+      <div class="logo">
+        <h1>ROYALE CART</h1>
+        <span>Élégance & Prestige</span>
+      </div>
+      <ul class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+      </ul>
+      <div class="header-icons">
+        <i class="fa-regular fa-heart"></i>
+        <i class="fa-regular fa-user"></i>
+        <i class="fa-solid fa-bag-shopping"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="container">
+    <!-- Hero section with multiple images -->
+    <div class="hero">
+      <div class="hero-content">
+        <div class="badge">LIMITED EDITION</div>
+        <h1>Where Elegance<br>Meets The Cart</h1>
+        <p>Discover the art of refined living. Royale Cart brings you curated luxury — from timeless fashion to opulent home decor. Exclusively crafted for royal tastes.</p>
+        <div class="btn-group">
+          <button class="btn-primary">Shop Now <i class="fa-solid fa-arrow-right"></i></button>
+          <button class="btn-secondary">Explore Collections</button>
+        </div>
+      </div>
+      <div class="hero-gallery">
+        <div class="hero-img large">
+          <img src="https://picsum.photos/id/106/500/600?grayscale" alt="royal luxury vase" loading="lazy">
+        </div>
+        <div class="img-grid">
+          <div class="hero-img">
+            <img src="https://picsum.photos/id/20/400/280" alt="elegant handbag" loading="lazy">
+          </div>
+          <div class="hero-img">
+            <img src="https://picsum.photos/id/30/400/280" alt="royal jewelry" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category section with different images -->
+    <div class="section-title">Shop by Category</div>
+    <div class="categories">
+      <div class="category-card">
+        <div class="category-img"><img src="https://picsum.photos/id/24/400/300" alt="fashion"></div>
+        <h3>Haute Couture</h3>
+        <p>Runway-inspired edits</p>
+      </div>
+      <div class="category-card">
+        <div class="category-img"><img src="https://picsum.photos/id/26/400/300" alt="jewelry"></div>
+        <h3>Fine Jewels</h3>
+        <p>Diamonds & heirlooms</p>
+      </div>
+      <div class="category-card">
+        <div class="category-img"><img src="https://picsum.photos/id/102/400/300" alt="home decor"></div>
+        <h3>Royal Home</h3>
+        <p>Opulent interiors</p>
+      </div>
+      <div class="category-card">
+        <div class="category-img"><img src="https://picsum.photos/id/41/400/300" alt="accessories"></div>
+        <h3>Signature Scents</h3>
+        <p>Luxury perfumery</p>
+      </div>
+    </div>
+
+    <!-- Featured products: diverse images -->
+    <div class="section-title">Bestsellers Royale</div>
+    <div class="featured-grid">
+      <div class="product-card">
+        <div class="product-img"><img src="https://picsum.photos/id/36/400/500" alt="silk dress"></div>
+        <div class="product-info">
+          <div class="product-title">Midnight Satin Gown</div>
+          <div class="product-price">$495</div>
+          <div class="rating">★★★★★</div>
+          <div class="add-cart">Add to Cart <i class="fa-solid fa-bag-shopping"></i></div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img"><img src="https://picsum.photos/id/0/400/500" alt="luxury watch"></div>
+        <div class="product-info">
+          <div class="product-title">Royale Chronograph</div>
+          <div class="product-price">$1,290</div>
+          <div class="rating">★★★★☆</div>
+          <div class="add-cart">Add to Cart</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img"><img src="https://picsum.photos/id/119/400/500" alt="perfume bottle"></div>
+        <div class="product-info">
+          <div class="product-title">Orphéon Noir</div>
+          <div class="product-price">$210</div>
+          <div class="rating">★★★★★</div>
+          <div class="add-cart">Add to Cart</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img"><img src="https://picsum.photos/id/29/400/500" alt="handbag"></div>
+        <div class="product-info">
+          <div class="product-title">The Duchess Tote</div>
+          <div class="product-price">$890</div>
+          <div class="rating">★★★★★</div>
+          <div class="add-cart">Add to Cart</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Luxurious banner with different image -->
+    <div class="banner-luxury">
+      <div class="banner-text">
+        <h2>Le Grand Royale Collection</h2>
+        <p>Inspired by timeless palaces and modern aristocracy. Limited pieces handcrafted with devotion.</p>
+        <button class="btn-primary" style="background:#b47c48;">Discover Now →</button>
+      </div>
+      <div class="banner-img">
+        <img src="https://picsum.photos/id/104/500/350" alt="luxury living room royal decor" loading="lazy">
+      </div>
+    </div>
+
+    <!-- Another image-rich section: testimonials with customer photo -->
+    <div class="testimonial">
+      <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+      <p>"Royale Cart redefines luxury shopping. The attention to detail and quality of materials is unmatched. Every package feels like a present."</p>
+      <div class="customer">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="customer portrait">
+        <span>— Victoria de La Croix, <span style="color:#b47c48;">Loyalist Member</span></span>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo-foot">ROYALE CART</div>
+        <p>Luxury e-boutique since 2022</p>
+        <div class="social-icons">
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-pinterest"></i>
+        </div>
+      </div>
+      <div class="footer-col">
+        
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 Royale Cart – All Rights Reserved. Crafted with elegance.
+    </div>
+  </div>
+</footer>
+
+<!-- simple interactive toast simulation for add to cart -->
+<script>
+  document.querySelectorAll('.add-cart').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      const productName = this.closest('.product-card')?.querySelector('.product-title')?.innerText || 'Item';
+      const toast = document.createElement('div');
+      toast.innerText = `✨ ${productName} added to your Royale Cart`;
+      toast.style.position = 'fixed';
+      toast.style.bottom = '30px';
+      toast.style.left = '50%';
+      toast.style.transform = 'translateX(-50%)';
+      toast.style.backgroundColor = '#2b211b';
+      toast.style.color = '#ecd6bf';
+      toast.style.padding = '12px 24px';
+      toast.style.borderRadius = '60px';
+      toast.style.fontWeight = '500';
+      toast.style.zIndex = '1000';
+      toast.style.fontSize = '0.9rem';
+      toast.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+      document.body.appendChild(toast);
+      setTimeout(() => toast.remove(), 2300);
+    });
+  });
+  // also hero buttons some playful alert
+  const shopBtn = document.querySelector('.btn-primary');
+  if(shopBtn) shopBtn.addEventListener('click', () => alert('Explore our royale collection ✨'));
+  const exploreBtn = document.querySelector('.btn-secondary');
+  if(exploreBtn) exploreBtn.addEventListener('click', () => alert('Discover timeless elegance at Royale Cart.'));
+</script>
+</body>
+</html>

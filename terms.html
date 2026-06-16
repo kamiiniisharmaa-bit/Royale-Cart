@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royale Cart - Terms & Conditions | Royal Agreement</title>
+  <!-- Google Fonts for elegant typography (same as homepage) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fefaf5;
+      color: #1e1a15;
+      line-height: 1.5;
+    }
+
+    /* reuse same header styling from homepage */
+    .top-bar {
+      background: #fffaf3;
+      border-bottom: 1px solid #f0e5da;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(2px);
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 20px 0;
+      gap: 20px;
+    }
+
+    .logo h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #c49a6c, #a57248);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .logo span {
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+      color: #b47c48;
+      display: block;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #2c241e;
+      transition: 0.2s;
+      font-size: 1rem;
+    }
+    .nav-links a:hover {
+      color: #b47c48;
+    }
+
+    .header-icons {
+      display: flex;
+      gap: 20px;
+      font-size: 1.3rem;
+      color: #2c241e;
+    }
+    .header-icons i {
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .header-icons i:hover {
+      color: #b47c48;
+    }
+
+    /* Terms hero banner */
+    .terms-hero {
+      background: linear-gradient(105deg, #f5ede4 0%, #faf1e9 100%);
+      border-radius: 32px;
+      margin: 40px 0 30px;
+      padding: 50px 40px;
+      text-align: center;
+    }
+    .terms-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #2b211b;
+      margin-bottom: 12px;
+    }
+    .terms-hero p {
+      font-size: 1.05rem;
+      color: #5f4c38;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .last-updated {
+      margin-top: 20px;
+      font-size: 0.85rem;
+      background: #fff;
+      display: inline-block;
+      padding: 5px 18px;
+      border-radius: 40px;
+      color: #b47c48;
+      font-weight: 500;
+    }
+
+    /* terms main content area */
+    .terms-content {
+      background: white;
+      border-radius: 40px;
+      padding: 48px 48px;
+      margin: 20px 0 60px;
+      box-shadow: 0 12px 28px -8px rgba(0,0,0,0.04);
+      border: 1px solid #f0e4d8;
+    }
+
+    .section-block {
+      margin-bottom: 42px;
+      scroll-margin-top: 100px;
+    }
+
+    .section-block h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem;
+      font-weight: 600;
+      color: #2b211b;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #e9dbcf;
+      display: inline-block;
+    }
+
+    .section-block h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 24px 0 10px 0;
+      color: #b47c48;
+    }
+
+    .section-block p {
+      margin-bottom: 16px;
+      color: #3a2e26;
+      line-height: 1.6;
+    }
+
+    .section-block ul, .section-block ol {
+      margin: 16px 0 16px 28px;
+      color: #3a2e26;
+    }
+    .section-block li {
+      margin: 8px 0;
+    }
+
+    .legal-note {
+      background: #fef8f2;
+      padding: 24px 28px;
+      border-radius: 28px;
+      margin: 32px 0 20px;
+      border-left: 6px solid #c49a6c;
+    }
+
+    .back-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #2b211b;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 500;
+      margin-top: 20px;
+      transition: 0.2s;
+    }
+    .back-home:hover {
+      background: #b47c48;
+      gap: 16px;
+    }
+
+    /* table of contents */
+    .toc {
+      background: #faf3ec;
+      border-radius: 28px;
+      padding: 24px 30px;
+      margin-bottom: 40px;
+    }
+    .toc h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: #2b211b;
+    }
+    .toc-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 28px;
+    }
+    .toc-grid a {
+      text-decoration: none;
+      color: #7c5d42;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: 0.2s;
+    }
+    .toc-grid a:hover {
+      color: #b47c48;
+      text-decoration: underline;
+    }
+
+    /* footer same as homepage */
+    footer {
+      background: #1e1813;
+      color: #ddcdbc;
+      margin-top: 40px;
+      padding: 48px 0 24px;
+    }
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    .footer-col p {
+      margin: 12px 0;
+    }
+    .footer-col .logo-foot {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #ecd6bf;
+    }
+    .social-icons i {
+      font-size: 1.3rem;
+      margin-right: 16px;
+      cursor: pointer;
+    }
+    .copyright {
+      text-align: center;
+      margin-top: 48px;
+      font-size: 0.75rem;
+      border-top: 1px solid #2f271f;
+      padding-top: 24px;
+    }
+    @media (max-width: 800px) {
+      .container {
+        padding: 0 20px;
+      }
+      .terms-content {
+        padding: 28px 20px;
+      }
+      .terms-hero h1 {
+        font-size: 2rem;
+      }
+      .navbar {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="container">
+    <div class="navbar">
+      <div class="logo">
+        <h1>ROYALE CART</h1>
+        <span>Élégance & Prestige</span>
+      </div>
+      <ul class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+      </ul>
+      <div class="header-icons">
+        <i class="fa-regular fa-heart"></i>
+        <i class="fa-regular fa-user"></i>
+        <i class="fa-solid fa-bag-shopping"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="container">
+    <!-- Terms Hero Section -->
+    <div class="terms-hero">
+      <h1>Terms & Conditions</h1>
+      <p>The Royal Charter — your guide to the dignified relationship between you and Royale Cart. Please read carefully before indulging in our world of luxury.</p>
+      <div class="last-updated"><i class="far fa-calendar-alt"></i> Last updated: June 12, 2026</div>
+    </div>
+
+    <!-- Table of Contents for easier navigation -->
+    <div class="toc">
+      <h3><i class="fas fa-scroll"></i> Royal Index</h3>
+      <div class="toc-grid">
+        <a href="#acceptance">1. Acceptance of Terms</a>
+        <a href="#eligibility">2. Eligibility</a>
+        <a href="#products">3. Products & Pricing</a>
+        <a href="#orders">4. Orders & Payment</a>
+        <a href="#shipping">5. Shipping & Delivery</a>
+        <a href="#returns">6. Returns & Refunds</a>
+        <a href="#intellectual">7. Intellectual Property</a>
+        <a href="#privacy">8. Privacy & Data</a>
+        <a href="#limitations">9. Limitation of Liability</a>
+        <a href="#governing">10. Governing Law</a>
+        <a href="#changes">11. Changes to Terms</a>
+      </div>
+    </div>
+
+    <!-- Main Terms Content -->
+    <div class="terms-content">
+      <div id="acceptance" class="section-block">
+        <h2>1. Acceptance of Terms</h2>
+        <p>By accessing or using the Royale Cart website (the "Site"), mobile application, or any related services (collectively, the "Service"), you agree to be bound by these Terms & Conditions ("Terms"). If you do not agree to all of these Terms, you must not access or use the Service. Royale Cart is a luxury e‑commerce platform owned and operated by Maison Royale SAS. These terms constitute a legally binding agreement between you and Royale Cart.</p>
+      </div>
+
+      <div id="eligibility" class="section-block">
+        <h2>2. Eligibility & Account Registration</h2>
+        <p>To make a purchase or become a Royale Circle™ member, you must be at least 18 years old and capable of forming a binding contract. You agree to provide accurate, current, and complete information during registration and to update such information to keep it accurate. You are solely responsible for safeguarding your account credentials and for any activity under your account. Notify us immediately of any breach of security.</p>
+      </div>
+
+      <div id="products" class="section-block">
+        <h2>3. Products, Pricing & Availability</h2>
+        <p>All products displayed on Royale Cart are subject to availability. We reserve the right to discontinue any product at any time. Prices are listed in USD (or local currency where applicable) and do not include applicable taxes, duties, or shipping charges unless expressly stated. Despite our best efforts, a small number of items may be mispriced. If an item’s correct price is higher than our stated price, we will contact you before shipping.</p>
+        <div class="legal-note">
+          <i class="fas fa-gem" style="margin-right: 10px; color:#b47c48;"></i> <strong>Royale Price Guarantee:</strong> For verified members, price adjustments are available within 7 days of purchase on select full-price items.
+        </div>
+      </div>
+
+      <div id="orders" class="section-block">
+        <h2>4. Orders & Payment</h2>
+        <p>When you place an order, you receive an order confirmation via email. This confirmation does not signify our acceptance of your order; we reserve the right to accept or decline your order for any reason (e.g., product limitation, payment verification). We accept major credit cards, PayPal, and Royale Cart gift cards. By providing payment details, you represent that you are authorized to use the chosen payment method. All transactions are encrypted and processed securely.</p>
+        <ul>
+          <li><strong>Order Cancellation:</strong> You may cancel within 1 hour of placing the order if it hasn't entered processing.</li>
+          <li><strong>Pre-orders:</strong> Estimated shipping dates are approximations; delays may occur. We will notify you of significant changes.</li>
+        </ul>
+      </div>
+
+      <div id="shipping" class="section-block">
+        <h2>5. Shipping & Delivery</h2>
+        <p>We ship worldwide with premium carriers (DHL Express, FedEx Priority). Shipping costs and estimated delivery times are displayed at checkout. Risk of loss and title for items purchased pass to you upon delivery to the carrier. However, we offer "Royale Care" packaging insurance for high-value items. Delivery times may vary due to customs clearance or force majeure events. For international orders, you are responsible for any import duties or taxes levied by your country.</p>
+      </div>
+
+      <div id="returns" class="section-block">
+        <h2>6. Returns & Refunds (The Royal Pledge)</h2>
+        <p>We stand behind the quality of every item. You may initiate a return within 14 days of delivery for most unworn, unused products in original packaging with all tags attached. Final sale items (including personalized goods, lingerie, and certain beauty products) are not returnable.</p>
+        <ol>
+          <li>Contact our client service to obtain a Return Merchandise Authorization (RMA).</li>
+          <li>Pack the item securely and affix the prepaid return label (for domestic returns).</li>
+          <li>Refunds will be issued to the original payment method within 7–10 business days after inspection.</li>
+        </ol>
+        <p><strong>Note:</strong> Original shipping fees are non-refundable unless the return is due to our error or a defective product. For defective items, we offer a full refund or exchange plus a $20 Royale Credit.</p>
+      </div>
+
+      <div id="intellectual" class="section-block">
+        <h2>7. Intellectual Property Rights</h2>
+        <p>All content on the Royale Cart website — including but not limited to text, graphics, logos, product images, videos, and software — is the property of Maison Royale SAS or its content suppliers and is protected by international copyright, trademark, and other intellectual property laws. The "Royale Cart" name, logo, and the crown device are registered trademarks. You may not reproduce, distribute, modify, or create derivative works of any material without our express written permission.</p>
+      </div>
+
+      <div id="privacy" class="section-block">
+        <h2>8. Privacy & Data Protection</h2>
+        <p>Your privacy is of paramount importance. Our Privacy Policy explains how we collect, use, and protect your personal information. By using the Service, you consent to the collection and use of information as described in the Privacy Policy, which includes our use of cookies and similar tracking technologies to enhance your experience.</p>
+        <p>We comply with GDPR for European users and CCPA for California residents. You may request access, correction, or deletion of your personal data by contacting <span style="color:#b47c48;">privacy@royalecart.com</span>.</p>
+      </div>
+
+      <div id="limitations" class="section-block">
+        <h2>9. Limitation of Liability</h2>
+        <p>To the fullest extent permitted by law, Royale Cart, its directors, employees, or affiliates shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, use, goodwill, or other intangible losses, arising out of or in connection with your use of the Service, products, or these Terms. In no event shall our total liability exceed the amount you paid for the specific product giving rise to the claim. Some jurisdictions do not allow the exclusion of certain warranties, so this may not apply to you.</p>
+      </div>
+
+      <div id="governing" class="section-block">
+        <h2>10. Governing Law & Dispute Resolution</h2>
+        <p>These Terms shall be governed by and construed in accordance with the laws of France, without regard to its conflict of law provisions. Any dispute arising from or relating to these Terms or your use of the Service shall be first attempted to be resolved through good-faith negotiation. If unresolved, the dispute shall be submitted to confidential arbitration in Paris, France, in accordance with the rules of the ICC. The arbitrator’s award shall be final and binding. For consumers residing in the EU, you may also use the Online Dispute Resolution platform provided by the European Commission.</p>
+      </div>
+
+      <div id="changes" class="section-block">
+        <h2>11. Modifications to Terms</h2>
+        <p>Royale Cart reserves the right to update or modify these Terms at any time without prior notice. Material changes will be communicated via email or a prominent notice on our Site. The "Last updated" date at the top of this page indicates when changes were last made. Your continued use of the Service after any changes constitutes acceptance of the revised Terms. We encourage you to review this page periodically.</p>
+      </div>
+
+      <div class="legal-note">
+        <i class="fas fa-crown" style="margin-right: 10px; color:#b47c48;"></i> <strong>For customer support or any inquiries regarding these Terms, please contact us at:</strong><br>
+        ✉️ legal@royalecart.com  &nbsp;|&nbsp; 📞 +33 1 88 88 40 20  &nbsp;|&nbsp; Maison Royale SAS, 24 Avenue des Champs-Élysées, 75008 Paris, France
+      </div>
+
+      <div style="text-align: center; margin-top: 30px;">
+        <a href="#" class="back-home" onclick="alert('Returning to Royale Cart homepage — elegance awaits.'); window.location.href='#';"><i class="fas fa-arrow-left"></i> Back to Royale Cart Home</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo-foot">ROYALE CART</div>
+        <p>Luxury e-boutique since 2022</p>
+        <div class="social-icons">
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-pinterest"></i>
+        </div>
+      </div>
+      <div class="footer-col">
+        
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 Royale Cart – All Rights Reserved. The Royal Terms govern all transactions.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Simple smooth scroll for anchor links within page
+  document.querySelectorAll('.toc-grid a, .section-block a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if(targetId && targetId !== '#') {
+        const targetElement = document.querySelector(targetId);
+        if(targetElement) {
+          e.preventDefault();
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // small highlight effect
+          targetElement.style.transition = '0.2s';
+          targetElement.style.backgroundColor = '#fcf6ef';
+          setTimeout(() => { targetElement.style.backgroundColor = ''; }, 700);
+        }
+      }
+    });
+  });
+  // Interactive click on header icons for demo
+  const icons = document.querySelectorAll('.header-icons i');
+  icons.forEach(icon => {
+    icon.addEventListener('click', () => {
+      alert('Royale Cart — please explore our terms & conditions first, then enjoy shopping.');
+    });
+  });
+</script>
+</body>
+</html>

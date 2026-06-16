@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Royale Cart - Privacy Policy | Your Data, Our Royal Promise</title>
+  <!-- Google Fonts: elegant serif + modern sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (free icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fefaf5;
+      color: #1e1a15;
+      line-height: 1.5;
+    }
+
+    /* consistent header styling (royale cart identity) */
+    .top-bar {
+      background: #fffaf3;
+      border-bottom: 1px solid #f0e5da;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(2px);
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 20px 0;
+      gap: 20px;
+    }
+
+    .logo h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #c49a6c, #a57248);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .logo span {
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+      color: #b47c48;
+      display: block;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #2c241e;
+      transition: 0.2s;
+      font-size: 1rem;
+    }
+    .nav-links a:hover {
+      color: #b47c48;
+    }
+
+    .header-icons {
+      display: flex;
+      gap: 20px;
+      font-size: 1.3rem;
+      color: #2c241e;
+    }
+    .header-icons i {
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .header-icons i:hover {
+      color: #b47c48;
+    }
+
+    /* privacy hero banner */
+    .privacy-hero {
+      background: linear-gradient(115deg, #f3ebe2 0%, #faf2ea 100%);
+      border-radius: 32px;
+      margin: 40px 0 30px;
+      padding: 48px 40px;
+      text-align: center;
+    }
+    .privacy-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #2b211b;
+      margin-bottom: 12px;
+      letter-spacing: -0.3px;
+    }
+    .privacy-hero p {
+      font-size: 1.05rem;
+      color: #5f4c38;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .effective-date {
+      margin-top: 20px;
+      background: rgba(255,255,240,0.7);
+      display: inline-block;
+      padding: 6px 20px;
+      border-radius: 60px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #b47c48;
+      backdrop-filter: blur(2px);
+    }
+
+    /* main content card */
+    .privacy-card {
+      background: white;
+      border-radius: 40px;
+      padding: 48px 48px;
+      margin: 20px 0 60px;
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.04);
+      border: 1px solid #f0e4d8;
+    }
+
+    .section {
+      margin-bottom: 48px;
+      scroll-margin-top: 90px;
+    }
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #2b211b;
+      margin-bottom: 20px;
+      border-left: 5px solid #c49a6c;
+      padding-left: 20px;
+    }
+    .section h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin: 28px 0 12px 0;
+      color: #b47c48;
+    }
+    .section p {
+      margin-bottom: 16px;
+      color: #3a2e26;
+      line-height: 1.65;
+    }
+    .section ul, .section ol {
+      margin: 16px 0 16px 30px;
+    }
+    .section li {
+      margin: 10px 0;
+      color: #3a2e26;
+    }
+
+    .highlight-box {
+      background: #fef8f2;
+      border-radius: 28px;
+      padding: 24px 30px;
+      margin: 32px 0;
+      border-left: 8px solid #c49a6c;
+    }
+    .data-table {
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .data-table table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fefaf5;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #e9dbcf;
+      padding: 12px 16px;
+      text-align: left;
+      vertical-align: top;
+    }
+    .data-table th {
+      background: #f2e7de;
+      font-weight: 700;
+      color: #2b211b;
+    }
+
+    .cookie-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin: 20px 0;
+    }
+    .cookie-type {
+      background: #f9f2ea;
+      padding: 14px 18px;
+      border-radius: 24px;
+      flex: 1 1 200px;
+    }
+
+    .back-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #2b211b;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 500;
+      margin-top: 20px;
+      transition: 0.2s;
+    }
+    .back-home:hover {
+      background: #b47c48;
+      gap: 16px;
+    }
+
+    /* footer */
+    footer {
+      background: #1e1813;
+      color: #ddcdbc;
+      margin-top: 40px;
+      padding: 48px 0 24px;
+    }
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    .footer-col p {
+      margin: 12px 0;
+    }
+    .footer-col .logo-foot {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #ecd6bf;
+    }
+    .social-icons i {
+      font-size: 1.3rem;
+      margin-right: 16px;
+      cursor: pointer;
+    }
+    .copyright {
+      text-align: center;
+      margin-top: 48px;
+      font-size: 0.75rem;
+      border-top: 1px solid #2f271f;
+      padding-top: 24px;
+    }
+    @media (max-width: 800px) {
+      .container {
+        padding: 0 20px;
+      }
+      .privacy-card {
+        padding: 28px 20px;
+      }
+      .privacy-hero h1 {
+        font-size: 2rem;
+      }
+      .navbar {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="container">
+    <div class="navbar">
+      <div class="logo">
+        <h1>ROYALE CART</h1>
+        <span>Élégance & Prestige</span>
+      </div>
+      <ul class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+      </ul>
+      <div class="header-icons">
+        <i class="fa-regular fa-heart"></i>
+        <i class="fa-regular fa-user"></i>
+        <i class="fa-solid fa-bag-shopping"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="container">
+    <!-- Privacy hero section -->
+    <div class="privacy-hero">
+      <h1>Privacy Policy</h1>
+      <p>Your trust is our greatest treasure. At Royale Cart, we honor the confidentiality and security of your personal data — handled with the same elegance as our collections.</p>
+      <div class="effective-date"><i class="far fa-shield-alt"></i> Effective: June 12, 2026</div>
+    </div>
+
+    <!-- main privacy content -->
+    <div class="privacy-card">
+      
+      <div id="introduction" class="section">
+        <h2>1. Our Royal Commitment</h2>
+        <p>Royale Cart (“we”, “us”, “our”) operates the Royale Cart e‑commerce platform. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, make a purchase, subscribe to our newsletter, or interact with our client services. By using our Services, you agree to the practices described in this Policy. We are committed to protecting your personal data and complying with applicable privacy laws, including the GDPR, CCPA, and PECR.</p>
+        <div class="highlight-box">
+          <i class="fas fa-crown" style="color:#b47c48; margin-right: 10px;"></i> <strong>Data Controller:</strong> Maison Royale SAS, 24 Avenue des Champs-Élysées, 75008 Paris, France. For any privacy inquiries, contact <span style="color:#b47c48;">privacy@royalecart.com</span>.
+        </div>
+      </div>
+
+      <div id="information-collect" class="section">
+        <h2>2. Information We Collect</h2>
+        <p>To offer you an unparalleled royal shopping experience, we collect several types of information from and about users of our Service.</p>
+        <div class="data-table">
+          <table>
+            <thead>
+              <tr><th>Category</th><th>Examples</th><th>Purpose</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Identity Data</strong></td><td>Full name, date of birth, gender, Royale Circle ID</td><td>Account creation, personalization, loyalty benefits</td></tr>
+              <tr><td><strong>Contact Data</strong></td><td>Billing/shipping address, email address, phone number</td><td>Order fulfillment, delivery updates, customer support</td></tr>
+              <tr><td><strong>Financial Data</strong></td><td>Payment card details, PayPal information (tokenized)</td><td>Process payments, prevent fraud</td></tr>
+              <tr><td><strong>Transaction Data</strong></td><td>Products purchased, order history, returns, wishlists</td><td>Manage orders, recommendations, after-sales</td></tr>
+              <tr><td><strong>Technical Data</strong></td><td>IP address, browser type, device ID, cookies, location (approximate)</td><td>Site security, analytics, performance improvement</td></tr>
+              <tr><td><strong>Marketing Data</strong></td><td>Newsletter preferences, survey responses, engagement metrics</td><td>Tailored offers, royale events, exclusive previews</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>We do not collect sensitive data (e.g., health information, political opinions) unless you voluntarily provide it for special assistance (e.g., accessibility requests).</p>
+      </div>
+
+      <div id="how-we-use" class="section">
+        <h2>3. How We Use Your Information</h2>
+        <p>Your personal data is used only for legitimate business interests and legal obligations. In particular:</p>
+        <ul>
+          <li><strong>To fulfill orders:</strong> process payments, arrange shipping, provide invoices and order confirmations.</li>
+          <li><strong>To manage your account:</strong> maintain loyalty rewards, save preferences, and provide wishlist functionality.</li>
+          <li><strong>To communicate with you:</strong> respond to inquiries, send service emails (order updates, delivery alerts), and notify about changes to terms or policies.</li>
+          <li><strong>For marketing (with consent):</strong> send you newsletters, personalized offers, and early access to collections. You can unsubscribe at any time via the link in our emails.</li>
+          <li><strong>To improve our services:</strong> analyze usage trends, diagnose technical issues, and enhance user experience.</li>
+          <li><strong>Fraud prevention & security:</strong> detect and prevent fraudulent transactions, cyber attacks, and unauthorized access.</li>
+        </ul>
+      </div>
+
+      <div id="cookies" class="section">
+        <h2>4. Cookies & Similar Technologies</h2>
+        <p>Royale Cart uses cookies, pixels, and local storage to provide essential functionality and optimize your browsing. These technologies help remember your cart items, login status, and language preferences. We also use analytics cookies (via Google Analytics & our own metrics) to understand how visitors interact with our site.</p>
+        <div class="cookie-grid">
+          <div class="cookie-type"><strong><i class="fas fa-cookie-bite"></i> Essential Cookies</strong><br>Always active – enable navigation and core features.</div>
+          <div class="cookie-type"><strong><i class="fas fa-chart-line"></i> Analytics Cookies</strong><br>Help us improve performance (anonymous data).</div>
+          <div class="cookie-type"><strong><i class="fas fa-bullhorn"></i> Marketing Cookies</strong><br>Personalize ads and Royale promotions (opt-in required).</div>
+        </div>
+        <p>You may control cookies via your browser settings. However, disabling essential cookies may affect site functionality. For more details, see our <a href="#" style="color:#b47c48;">Cookie Preferences</a>.</p>
+      </div>
+
+      <div id="sharing" class="section">
+        <h2>5. Information Sharing & Disclosure</h2>
+        <p>We respect your privacy and do not sell your personal data. However, we share information with trusted third parties only for operational purposes:</p>
+        <ul>
+          <li><strong>Service Providers:</strong> Payment processors (Stripe, PayPal), shipping carriers (DHL, FedEx), IT hosting, and email delivery platforms. They only receive data necessary to perform their functions and are bound by confidentiality agreements.</li>
+          <li><strong>Legal Compliance:</strong> If required by law, court order, or governmental regulation, we may disclose information to protect our rights, safety, or property.</li>
+          <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or asset sale, your data may be transferred, subject to continued protection under this policy.</li>
+        </ul>
+        <div class="highlight-box">
+          <i class="fas fa-lock"></i> <strong>Royal Confidentiality Pledge:</strong> We never share your personal information with third parties for their own direct marketing without your explicit consent.
+        </div>
+      </div>
+
+      <div id="data-security" class="section">
+        <h2>6. Data Security & Retention</h2>
+        <p>We implement industry-standard security measures, including SSL encryption, firewalls, and restricted access to personal data. Payment card information is tokenized and not stored on our servers after authorization. Despite our efforts, no internet transmission is 100% secure.</p>
+        <p>We retain your personal data only as long as necessary: for active accounts (duration of your relationship with Royale Cart), to comply with legal obligations (e.g., tax records for 7 years), and for legitimate business purposes (fraud prevention, analytics). After that, data is securely deleted or anonymized.</p>
+      </div>
+
+      <div id="your-rights" class="section">
+        <h2>7. Your Privacy Rights (GDPR, CCPA, & Global)</h2>
+        <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+        <ul>
+          <li><strong>Right to Access:</strong> Request a copy of the personal data we hold about you.</li>
+          <li><strong>Right to Rectification:</strong> Correct inaccurate or incomplete data.</li>
+          <li><strong>Right to Erasure (“Right to be Forgotten”):</strong> Request deletion of your data, subject to legal retention periods.</li>
+          <li><strong>Right to Restrict Processing:</strong> Limit how we use your data in certain circumstances.</li>
+          <li><strong>Right to Data Portability:</strong> Receive your data in a structured, machine-readable format.</li>
+          <li><strong>Right to Object:</strong> Opt-out of direct marketing or processing based on legitimate interests.</li>
+          <li><strong>California Privacy Rights (CCPA):</strong> California residents may request disclosure of categories of personal information collected, deletion, and opt-out of “sale” of data (we do not sell).</li>
+        </ul>
+        <p>To exercise any rights, please contact <strong>privacy@royalecart.com</strong> or call our Privacy Desk at +33 1 88 88 40 21. We will respond within 30 days. You also have the right to lodge a complaint with your local supervisory authority (e.g., CNIL in France).</p>
+      </div>
+
+      <div id="children" class="section">
+        <h2>8. Children’s Privacy</h2>
+        <p>Royale Cart does not knowingly collect personal information from individuals under the age of 16. If we learn that we have inadvertently collected data from a child under 16, we will take steps to delete it promptly. Parents or guardians may contact us to request removal.</p>
+      </div>
+
+      <div id="international" class="section">
+        <h2>9. International Data Transfers</h2>
+        <p>As a global luxury brand, we operate internationally. Your data may be transferred to and processed in countries outside your own, including France (our headquarters) and the United States (for cloud hosting). When we transfer data from the European Economic Area (EEA), we ensure appropriate safeguards such as Standard Contractual Clauses (SCCs) or adequacy decisions. By using our services, you understand that your information may be transferred to our facilities and those third parties with whom we share it as described in this policy.</p>
+      </div>
+
+      <div id="policy-updates" class="section">
+        <h2>10. Updates to This Privacy Policy</h2>
+        <p>We may revise this Privacy Policy from time to time to reflect changes in our practices, technology, or legal requirements. The “Effective” date at the top indicates the latest revision. If we make material changes, we will notify you via email (if you have an account) or through a notice on our website. We encourage you to review this page periodically to stay informed.</p>
+      </div>
+
+      <div id="contact" class="section">
+        <h2>11. Contact Us</h2>
+        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please reach out to our Data Protection Officer (DPO):</p>
+        <div class="highlight-box">
+          <i class="fas fa-envelope"></i> <strong>Email:</strong> privacy@royalecart.com <br>
+          <i class="fas fa-phone-alt"></i> <strong>Phone:</strong> +33 1 88 88 40 20 (Mon-Fri, 10am-6pm CET) <br>
+          <i class="fas fa-map-marker-alt"></i> <strong>Postal:</strong> Maison Royale SAS – Privacy Dept., 24 Av. des Champs-Élysées, 75008 Paris, France
+        </div>
+        <p>We are committed to resolving any privacy complaints in a transparent and timely manner. For unresolved issues, you may also contact the French data protection authority (CNIL) at <a href="#" style="color:#b47c48;">www.cnil.fr</a>.</p>
+      </div>
+
+      <div style="text-align: center; margin-top: 30px;">
+        <a href="#" class="back-home" onclick="alert('Returning to Royale Cart homepage — your privacy remains our priority.'); window.location.href='#';"><i class="fas fa-arrow-left"></i> Return to Homepage</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo-foot">ROYALE CART</div>
+        <p>Luxury e-boutique since 2022</p>
+        <div class="social-icons">
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-pinterest"></i>
+        </div>
+      </div>
+      <div class="footer-col">
+        
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 Royale Cart – All Rights Reserved. Privacy is a luxury we guarantee.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // smooth scroll for internal anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId && targetId !== '#') {
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // subtle highlight animation
+          targetElement.style.transition = 'background 0.3s';
+          targetElement.style.backgroundColor = '#fcf2e8';
+          setTimeout(() => { targetElement.style.backgroundColor = ''; }, 800);
+        }
+      }
+    });
+  });
+  // Interactive header icons (demonstration)
+  const icons = document.querySelectorAll('.header-icons i');
+  icons.forEach(icon => {
+    icon.addEventListener('click', () => {
+      alert('🔐 Royale Cart protects your privacy. For details, refer to our Privacy Policy.');
+    });
+  });
+</script>
+</body>
+</html>
